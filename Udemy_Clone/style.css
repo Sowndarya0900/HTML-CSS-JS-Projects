@@ -1,5 +1,4 @@
  * {
-
      margin: 0;
      padding: 0;
  }
@@ -7,6 +6,10 @@
  body {
      font-family: "Gabarito", sans-serif;
  }
+
+
+
+
 
  .navbar {
      padding: 10px;
@@ -21,6 +24,7 @@
      z-index: 1;
  }
 
+
  .navbar__s1__title {
      color: #7D56C1;
  }
@@ -33,7 +37,6 @@
      display: flex;
      gap: 10px;
      align-items: center;
-
  }
 
  .navbar__s2 input {
@@ -51,7 +54,7 @@
      /* font-size: 20px; */
      display: flex;
      gap: 10px;
-     align-items: center ;
+     align-items: center;
  }
 
  .navbar__s3 i {
@@ -59,8 +62,9 @@
      font-size: 20px;
      align-items: center;
  }
- .navbar__s3 .navbar__s3__title{
-    cursor: pointer;
+
+ .navbar__s3 .navbar__s3__title {
+     cursor: pointer;
  }
 
  .navbar__s4 {
@@ -85,9 +89,13 @@
  }
 
  .mylearning:hover .mylearning__popup {
-    display: block;
+     display: block;
  }
 
+
+
+
+ /* CATEGORIES */
  .categories {
      display: flex;
      padding: 10px;
@@ -103,45 +111,51 @@
      cursor: pointer;
      border: solid blueviolet 2px;
  }
- .categories p:hover{
-    transition: 1s;
-    background-color: transparent;
-    color: blueviolet;
-border: solid blueviolet 2px;
+
+ .categories p:hover {
+     transition: 1s;
+     background-color: transparent;
+     color: blueviolet;
+     border: solid blueviolet 2px;
 
  }
 
 
+
+
+ /* <!-- SALE-IMAGE --> */
  .sale-image {
-    position: relative;
+     position: relative;
  }
 
  .sale-image img {
      width: 100%;
-   
  }
-.sale-image__offer {
+
+ .sale-image__offer {
      width: 25%;
      border: solid black 3px;
      background-color: white;
      padding: 1%;
      position: absolute;
-    top: 20%;
+     top: 20%;
      left: 10%;
      animation-name: zoom;
      animation-duration: 2s;
      opacity: 0;
      animation-fill-mode: forwards;
  }
- @keyframes zoom{
-    0%{
-        transform: scale(0);
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
+
+ @keyframes zoom {
+     0% {
+         transform: scale(0);
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+         transform: scale(1);
+     }
  }
 
  .sale-image__offer h2 {
@@ -149,11 +163,12 @@ border: solid blueviolet 2px;
  }
 
 
+
+
+ /* RECOMMENDATION */
  .recommendation {
      padding: 10PX;
  }
-
-
 
  .recommendation__container {
      display: flex;
@@ -165,18 +180,35 @@ border: solid blueviolet 2px;
  .course-card {
      flex-grow: 1;
      flex-basis: 20%;
-     margin: 5px;
+     margin: 8px;
+     border-radius: 10px;
+     padding: 10px;
  }
 
+ .course-card:hover {
+     cursor: pointer;
+     box-shadow: rgba(190, 0, 211, 0.35) 0px 5px 15px;
+     padding: 10px;
+ }
+
+ .course-card h3:hover {
+     text-decoration: underline;
+     color: brown;
+     /* box-shadow: rgba(243, 0, 218, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+ }
 
  .course-card img {
      width: 100%;
      height: 50%;
+     border-radius: 10px;
  }
 
+
+
+
+ /* TOPICS */
  .topics {
      padding: 10px;
-
  }
 
  .topic__content {
@@ -184,9 +216,6 @@ border: solid blueviolet 2px;
      gap: 10px;
      margin-top: 10px;
      flex-wrap: wrap;
-     /* flex-direction: row  ;
-
- */
  }
 
  .topic__content p {
@@ -194,12 +223,41 @@ border: solid blueviolet 2px;
      padding: 10px;
      flex-grow: 1;
      flex-basis: 25%;
-     /* justify-content: center;
-    align-items: center;} */
+     border-radius: 10px;
+     /* align-items: center; */
  }
 
+ .topic__content p:hover {
+     background-color: rgb(0, 255, 234);
+     cursor: pointer;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     animation-name: bounce;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+
+ @keyframes bounce {
+     0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-3px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
+ }
+
+
+
+
+ /* POPULAR */
  .popular {
      padding: 10px;
+     margin-top: 3%;
  }
 
  .popular__content {
@@ -209,6 +267,10 @@ border: solid blueviolet 2px;
      margin-top: 10px;
  }
 
+
+
+
+ /* FOOTER */
  .footer {
      padding: 30px;
      background-color: black;
@@ -240,6 +302,7 @@ border: solid blueviolet 2px;
          font-size: 10px;
      }
  }
+
  /*MOBILE VIEW*/
  @media screen and (max-width:550px) {
      .course-card {
@@ -260,7 +323,7 @@ border: solid blueviolet 2px;
      }
 
      .sale-image__offer {
-        width: 35%;
-        top: 10%;
+         width: 35%;
+         top: 10%;
      }
  }
