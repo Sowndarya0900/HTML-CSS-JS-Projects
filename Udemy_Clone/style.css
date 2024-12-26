@@ -134,7 +134,7 @@
 
  .sale-image__offer {
      width: 25%;
-     border: solid black 3px;
+     border: ridge rgb(220, 17, 176) 5px;
      background-color: white;
      padding: 1%;
      position: absolute;
@@ -144,6 +144,7 @@
      animation-duration: 2s;
      opacity: 0;
      animation-fill-mode: forwards;
+     box-shadow: rgba(241, 5, 217, 0.2) 0px 2px 8px 0px;
  }
 
  @keyframes zoom {
